@@ -1,16 +1,16 @@
 package sifd
 
 class DayOne(val message: String) {
-  def mul(a: Integer, b: Integer): Integer = {
+  def mul(a: Int, b: Int): Int = {
     a * b
   }
 
-  def rangeSum(n: Integer): Integer = {
+  def rangeSum(n: Int): Int = {
     0.to(n).sum // TODO figure out why parens breaks this
   }
 
   // iteration/ranges
-  def printRange(n: Integer) {
+  def printRange(n: Int) {
     // inclusive of `n`
     for (i <- 0 to n) {
       print(f"$i ")
@@ -18,7 +18,7 @@ class DayOne(val message: String) {
     println()
   }
 
-  def printRangeWhile(n: Integer) {
+  def printRangeWhile(n: Int) {
     var i = 0
     // expected exclusive range behavior
     while (i < n) {
@@ -28,16 +28,16 @@ class DayOne(val message: String) {
     println()
   }
 
-  def printRangeForEach(n: Integer) {
+  def printRangeForEach(n: Int) {
     0.to(n).foreach(printf("%d ", _))
     println()
   }
 
-  def printRangeMkString(n: Integer): Unit = {
+  def printRangeMkString(n: Int): Unit = {
     println(0.to(n).mkString(" "))
   }
 
-  def printRangeReversed(n: Integer): Unit = {
+  def printRangeReversed(n: Int): Unit = {
     0.to(n).reverse.foreach(printf("%d ", _))
     println()
   }
@@ -50,12 +50,12 @@ class DayOne(val message: String) {
     println(f"three == ${one + 2}") // preferred
   }
 
-  def inclusiveArr(n: Integer): Array[Integer] = {
-    0.to(n).map(_.asInstanceOf[Integer]).toArray
+  def inclusiveArr(n: Int): Array[Int] = {
+    0.to(n).toArray
   }
 
-  def exclusiveArr(n: Integer): Array[Integer] = {
-    0.until(n).map(_.asInstanceOf[Integer]).toArray
+  def exclusiveArr(n: Int): Array[Int] = {
+    0.until(n).toArray
   }
 
   def maps(): Unit = {

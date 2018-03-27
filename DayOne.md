@@ -19,7 +19,7 @@ methods)
 string concatenation also works, but is not recommended.
 * `C` style loops don't exist. use `for (i <- 0 to 100)` instead.
 `(i <- 0 until 100)` excludes the last value, `to` is inclusive
-* `while` works as expected
+* `while` works as expected (may be a curried function?)
 * prefer functional operations to iterative. i.e. `1.to(10).sum` instead
 of iterating to generate the sum
 * no `++` or `--` operators
