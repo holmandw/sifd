@@ -1,10 +1,13 @@
 package sifd
 
+import java.time.LocalDateTime
+
 // Singleton class
 object Main extends App {
   // static methods are run when the application starts
   dayOne()
-
+  dayTwo()
+  println(LocalDateTime.now)
   def dayOne(): Unit = {
     // still have to use new. `val` creates an immutable value
     val d = new DayOne("foobar")
@@ -37,5 +40,23 @@ object Main extends App {
     println(e0)
     println(e1)
   }
+
+  def dayTwo(): Unit = {
+    val d = new DayTwo()
+    d.pwd()
+    d.head()
+    /*
+    for (line <- d.getProjectReadMe) {
+      println(line)
+    }
+    */
+    d.findLinesWithNumbers()
+    d.functionalFun()
+    d.controls()
+    d.colls()
+    d.matching()
+    d.futures()
+  }
+
 
 }
